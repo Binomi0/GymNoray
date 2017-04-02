@@ -1,0 +1,108 @@
+.main-menu {
+  list-style: none;
+  margin:0;
+  padding:0;
+  font-family: $header--font-family;
+
+  @include to($bp-menu){
+    &__link {
+      display: block;
+      margin:0 1em .3em;
+      padding:.5em 1em;
+      color: $color2;
+      border-bottom: 1px solid rgba(#fff,.2);
+      box-shadow: 2px 0 0 0 #FFFFFF inset;
+      transition: all .6s;
+      transition-timing-function: ease-out;
+      &:first-child {
+        margin-top: 0.5em;
+      }
+      &:before {
+        margin-right: 1em;
+      }
+
+      &:hover {
+        padding-left: 2em;
+        text-decoration: none;
+        color: darken($color2,50%);
+        box-shadow: 200px 0 0 0 #FFFFFF inset;
+      }
+    }
+  }
+
+  @include from($bp-menu){
+    @include edMenu($bp-menu);
+    &__link {
+      border-right: 2px solid rgba(#fff,.3);
+      box-shadow: 0 0 0 0 rgba(#fff,.2) inset;
+      color: $color2;
+      font-size: .9em;
+      line-height: 3em;
+      margin: 1em 0;
+      opacity:.8;
+      text-transform: uppercase;
+      transition: all .5s;
+      transition-timing-function: ease-out;
+      &:active{
+        background: #FFFFFF;
+      }
+
+      &:hover {
+        box-shadow: -100px 0 0 0 rgba(#fff,.6) inset;
+        opacity:1;
+        text-shadow: 1px 1px #555;
+        color: $color1;
+      }
+
+      &:before{
+        display: none;
+        margin-right:1em;
+        padding:0;
+      }
+    }
+  }
+
+  &__item {
+
+  }
+
+  &__subitem {
+    font-size: .7em;
+  }
+
+  &__sublink {
+  }
+
+}
+
+
+.main-nav {
+  background: $color1;
+  color: $color2;
+  //margin-bottom: 1em;
+
+
+  @include to($bp-menu) {
+    @include edNav(right, $bp-menu);
+    margin-top: 2.9em;
+    border-top: 1px solid rgba(#fff,.3);
+  }
+}
+
+.nav-toggle{
+
+  @include to(l){
+    margin: 2em 0 2em;
+  }
+
+  @include from(m){
+
+  }
+
+
+
+  @include to($bp-menu){
+    
+    @include navToggle(15px,$color2);
+  }
+}

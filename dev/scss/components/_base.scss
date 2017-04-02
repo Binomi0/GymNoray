@@ -1,0 +1,39 @@
+// RWD Bases
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin      : 0;
+  font-family : sans-serif;
+}
+
+// Imágenes responsive
+img {
+  max-width : 100%;
+  height    : auto;
+}
+
+a {
+  text-decoration : none;
+
+  &:hover { text-decoration : underline }
+
+}
+
+section{
+  padding:1.5em 0;
+
+}
+
+h2,h3 {
+  text-shadow: 1px 1px rgba(#888,.6);
+
+}
+
+footer{
+  text-shadow: 1px 1px rgba(#222,.8);
+
+}

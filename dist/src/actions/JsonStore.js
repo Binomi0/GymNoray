@@ -11,7 +11,7 @@ export default class JsonData extends React.Component {
 
     componentDidMount() {
         console.log("El componente JsonData ha sido montado");
-        fetch('http://gymnoray.com/wp-json/wp/v2/users')
+        fetch('http://gymnoray.com/wp-json/wp/v2/media')
             .then( (response) => {
                 return response.json() })
             .then( (json) => {
@@ -22,7 +22,11 @@ export default class JsonData extends React.Component {
         const data = this.state.posts;
         const listaposts = data.map(id => {
             return (
-                <li key={id.id}>{id.link}</li>
+                <li key={id.id}>
+                    <a href={id.guid.rendered}>{id.title.rendered}
+                    <img width="50" height="50" src={id.guid.rendered} alt={id.title.rendered} title={id.title.rendered} />
+                    </a>
+                </li>
             );
         });
         return (
@@ -35,5 +39,6 @@ export default class JsonData extends React.Component {
 
 JsonData.PropTypes = {
     posts: React.PropTypes.string,
-    id: React.PropTypes.number
+    id: React.PropTypes.number,
+    rendered: React.PropTypes.string
 };

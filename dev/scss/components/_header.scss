@@ -1,0 +1,65 @@
+$color1: #EAAC00;
+$color2: #fef3db;
+$color3: #221D48;
+$color4: #FFFFFF;
+
+$bp-menu: l;
+
+#header {
+  @include to($bp-menu){
+    background: $color1;
+  }
+
+  @include from($bp-menu){
+    background: linear-gradient(
+                $color1 70%,
+                transparent 70%
+    );
+  }
+}
+
+.logo {
+  color: $color2;
+  font-weight:300;
+  font-size: 2em;
+  font-family: $header--font-family;
+  line-height:1em;
+  margin:.3em 0 0;
+  text-align: left;
+  text-shadow: 1px 1px rgba(#444,.9);
+  text-transform: uppercase;
+  span {
+    font-weight: 600;
+    color: $color3;
+    text-shadow: 1px 1px rgba(#ccc,.9);
+  }
+  &:before{
+    content: "";
+    background: url("../../img/logo32.png");
+    padding: 0 0 0 1.1em;
+    background-repeat: no-repeat;
+  }
+
+
+  @include from(m){
+  }
+}
+
+.logo2{
+  float: left;
+}
+.subtitle {
+  text-shadow: 1px 1px rgba(#555,.5);
+  margin:0;
+  font-family: $body--font-family;
+  font-weight: 300;
+  line-height:1em;
+  opacity:.7;
+  text-align: left;
+  letter-spacing: -0.05em;
+  @include from($bp-menu){
+    text-align: left;
+
+
+  }
+}

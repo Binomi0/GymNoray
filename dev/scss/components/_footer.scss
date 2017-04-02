@@ -1,0 +1,41 @@
+#footer{
+  background: $color1;
+  color: $color2;
+  font-size: .8em;
+  padding: 1em 0;
+
+  @include to(m){
+    text-align: center;
+  }
+}
+
+.creditos{
+  margin-bottom: 0;
+}
+
+
+.sociales{
+  text-align: center;
+  padding-top: .5em;
+
+  &__item {
+    font-size: 1.2em;
+    color: $color1;
+    background: darken($color1,15%);
+    display: inline-block;
+    margin: .3em;
+    border-radius: 50%;
+    padding: .3em;
+    &:hover{
+      text-decoration: none;
+      color: #fff;
+    }
+  }
+  #footer & {
+    padding-top: 0;
+    @include from(m){
+      text-align: right;
+    }
+
+  }
+}

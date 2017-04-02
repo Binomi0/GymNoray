@@ -1,0 +1,74 @@
+/**
+  EDgrid es una librería CSS para construir layouts con Responsive Web Design
+  Importe este archivo en su proyecto para empezar a usarlo
+**/
+
+//Funciones para convertir px a em y rem
+@import "components/functions";
+
+// Variables globales (puede sobreescribirlas antes de importar ED grid)
+// No las sobreescriba aquí, sino desde su proyecto.
+  $cssCore    : true  !default;
+  $cssHelpers : true  !default;
+  $devMode    : false !default;
+
+// Selectores (clases) para flex-container y flex-item
+  $container : ed-container !default;
+  $item      : ed-item !default;
+
+// Ancho máximo para los contenedores
+  $max-width : 1024px !default;
+
+// Seperación horizontal entre items (*2)
+  $gutter : em(15px) !default;
+
+// Breakpoints
+  $breakpoints : (
+    s  : 0,
+    m  : 640px,
+    l  : 1024px,
+    xl : 1440px
+  ) !default;
+
+// Fracciones para calcular anchos de los items
+  $fractions : 3 6 !default;
+
+// colores principales
+$color1: #EAAC00;
+$color2: #fef3db;
+$color3: #221D48;
+$color4: #FFFFFF;
+
+// Tipos de fuentes
+$header--font-family: 'Roboto Condensed', sans serif;
+$body--font-family: 'Open Sans', sans serif;
+
+
+
+// Importar componentes
+@import "components/base";            // estilos base
+@import "components/media-queries";   // mixins from(), to(), fromTo()
+@import "components/helpers";         // utilidades
+@import "components/dev";             // modo dev
+@import "components/core";            // core de EDgrid (containers y items)
+@import "components/grid";            // mixin grid()
+@import "components/visibility";      // mixins para visibilidad
+@import "components/video";           // video RWD
+@import "components/ed-menu";         // estilos para menus
+@import "components/flexbox";         // utilidades con flexbox
+@import "components/offset";          // offsets
+@import "components/buttons";         // mixin button()
+@import "components/css-core";        // componentes que se compilaran por default a css
+@import "components/css-helpers";     // ayudas en css (por medio de clases)
+@import "components/header";          // Estilos del Header
+@import "components/fonts";           // Fuentes
+@import "components/banner";          // Banner
+@import "components/servicios";       // Servicios
+@import "components/modulos";         // Módulos
+@import "components/clientes";        // Clientes
+@import "components/noticias";        // Noticias
+@import "components/footer";          // Footer
+@import "components/menu";            // Menu Principal
+@import "components/galeria";         // Galería de Imágenes
+@import "components/productos";       // Sección de productos
+

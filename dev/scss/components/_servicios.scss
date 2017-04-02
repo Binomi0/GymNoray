@@ -1,0 +1,23 @@
+.servicio{
+  text-align: center;
+  &__img{
+    background: $color1;
+    width:15%;
+    border-radius: 50%;
+    opacity:.7;
+
+    @include from(m){
+      width:33%;
+      margin-bottom: 1em;
+    }
+
+
+  }
+  &__title{
+    margin: .3em 0;
+  }
+  &__description{
+    font-size: .8em;
+
+  }
+}

@@ -1,0 +1,11 @@
+$cssCore    : false;
+$cssHelpers : true;
+$devMode    : false;
+
+@import "../scss/ed-grid.scss";
+
+body {
+  font-family: $body--font-family;
+  background: $color2;
+
+}
