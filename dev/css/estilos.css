@@ -768,11 +768,9 @@ body.sticky-footer {
   font-style: normal;
   font-weight: 400;
   src: local("Roboto Condensed"), local("RobotoCondensed-Regular"), url(https://fonts.gstatic.com/s/robotocondensed/v13/Zd2E9abXLFGSr9G3YK2MsNxB8OB85xaNTJvVSB9YUjQ.woff) format("woff"); }
-.banner {
-  margin-top: 1em; }
-
 .copy {
-  margin: 0; }
+  margin: 0;
+  padding-left: 1em; }
   .copy__title {
     color: #fef3db;
     font-weight: 600;
@@ -848,10 +846,12 @@ body.sticky-footer {
   text-align: center;
   font-weight: 400;
   font-family: "Open Sans", sans serif;
-  margin: 0 0 1.5em; }
+  margin: 0 0 1.5em;
+  font-size: 2em;
+  text-transform: uppercase; }
   .section-title span {
     display: block;
-    font-size: .8em; }
+    font-size: .5em; }
 
 .clientes {
   margin-bottom: 2em; }
@@ -1273,5 +1273,19 @@ body.sticky-footer {
 body {
   font-family: "Open Sans", sans serif;
   background: #fef3db; }
+
+.example-enter {
+  opacity: 0.01; }
+
+.example-enter.example-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in; }
+
+.example-leave {
+  opacity: 1; }
+
+.example-leave.example-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in; }
 
 /*# sourceMappingURL=estilos.css.map */

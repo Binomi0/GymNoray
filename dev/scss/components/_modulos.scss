@@ -4,9 +4,11 @@
   font-weight:400;
   font-family: $body--font-family;
   margin:0 0 1.5em;
+  font-size: 2em;
+  text-transform: uppercase;
 
   span {
     display: block;
-    font-size: .8em;
+    font-size: .5em;
   }
 }

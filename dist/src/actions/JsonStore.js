@@ -1,5 +1,4 @@
 import React from 'react'
-// import Header from '../components/Header'
 
 export default class JsonData extends React.Component {
     constructor() {
@@ -23,9 +22,9 @@ export default class JsonData extends React.Component {
         const listaposts = data.map(id => {
             return (
                 <li key={id.id}>
-                    <a href={id.guid.rendered}>{id.title.rendered}
-                    <img width="50" height="50" src={id.guid.rendered} alt={id.title.rendered} title={id.title.rendered} />
-                    </a>
+                        <a href={id.guid.rendered}>{id.title.rendered}
+                        <img width="50" height="50" src={id.guid.rendered} alt={id.title.rendered} title={id.title.rendered} />
+                        </a>
                 </li>
             );
         });

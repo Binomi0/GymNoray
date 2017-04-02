@@ -1,8 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import App from './App'
+// import App from './App'
+import Slider from './components/Slider'
 
 ReactDOM.render(
-    <App />,
-    document.getElementById('root')
+    <Slider />,
+    document.getElementById('banner')
 );
