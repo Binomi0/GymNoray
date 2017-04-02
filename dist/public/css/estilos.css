@@ -1246,9 +1246,8 @@ body.sticky-footer > footer {
 
 /* line 4, dev/scss/components/_servicios.scss */
 .servicio__img {
-  background: #EAAC00;
-  width: 15%;
-  border-radius: 50%;
+  width: 5em;
+  height: 5em;
   opacity: .7;
 }
 
@@ -1260,12 +1259,12 @@ body.sticky-footer > footer {
   }
 }
 
-/* line 17, dev/scss/components/_servicios.scss */
+/* line 18, dev/scss/components/_servicios.scss */
 .servicio__title {
   margin: .3em 0;
 }
 
-/* line 20, dev/scss/components/_servicios.scss */
+/* line 21, dev/scss/components/_servicios.scss */
 .servicio__description {
   font-size: .8em;
 }

@@ -829,9 +829,8 @@ body.sticky-footer {
 .servicio {
   text-align: center; }
   .servicio__img {
-    background: #EAAC00;
-    width: 15%;
-    border-radius: 50%;
+    width: 5em;
+    height: 5em;
     opacity: .7; }
     @media screen and (min-width: 640px) {
       .servicio__img {

@@ -2,9 +2,10 @@
   text-align: center;
 
   &__img{
-    background: $color1;
-    width:15%;
-    border-radius: 50%;
+    //background: $color1;
+    width:5em;
+    height:5em;
+    //border-radius: 50%;
     opacity:.7;
 
     @include from(m){
