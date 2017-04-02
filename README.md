@@ -5,4 +5,4 @@ Starting
 
 
 # La carpeta DIST contiene la parte del proyecto hecho con ReactJS. 
-# Para lanzar entrar en la carpeta DEV y ejecutar "npm start".
+# Para lanzar entrar en la carpeta "dist" y ejecutar "npm start".
