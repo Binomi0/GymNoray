@@ -21,9 +21,6 @@ a {
   a:hover {
     text-decoration: underline; }
 
-section {
-  padding: 1.5em 0; }
-
 h2, h3 {
   text-shadow: 1px 1px rgba(136, 136, 136, 0.6); }
 
@@ -562,12 +559,12 @@ html, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, 
   clear: both; }
 
 .no-padding.ed-container > .ed-item {
-  padding-left: 0em;
-  padding-right: 0em; }
+  padding-left: 0;
+  padding-right: 0; }
 
 .no-padding.ed-item {
-  padding-left: 0em;
-  padding-right: 0em; }
+  padding-left: 0;
+  padding-right: 0; }
 
 .padding {
   padding-left: 0.9375em;
@@ -705,12 +702,14 @@ body.sticky-footer {
   .button:active {
     transform: scale(0.97); }
 
-@media screen and (max-width: 1023px) {
-  #header {
-    background: #EAAC00; } }
-@media screen and (min-width: 1024px) {
-  #header {
-    background: linear-gradient(#EAAC00 70%, transparent 70%); } }
+.header {
+  margin-bottom: 1em; }
+  @media screen and (max-width: 1023px) {
+    .header {
+      background: #EAAC00; } }
+  @media screen and (min-width: 1024px) {
+    .header {
+      background: linear-gradient(#EAAC00 70%, transparent 70%); } }
 
 .logo {
   color: #fef3db;
@@ -831,6 +830,9 @@ body.sticky-footer {
 @media screen and (min-width: 1024px) {
   .copy {
     width: 50%; } }
+.servicios {
+  margin-bottom: 2em; }
+
 .servicio {
   text-align: center; }
   .servicio__img {
@@ -1155,6 +1157,9 @@ body.sticky-footer {
     transition-delay: .6s; }
   .item-galeria:hover:after {
     border: 1px solid rgba(255, 255, 255, 0.8); }
+
+.productos {
+  margin-bottom: 2em; }
 
 .producto {
   position: relative; }

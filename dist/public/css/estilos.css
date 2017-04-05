@@ -32,11 +32,6 @@ a:hover {
   text-decoration: underline;
 }
 
-/* line 26, dev/scss/components/_base.scss */
-section {
-  padding: 1.5em 0;
-}
-
 /* line 31, dev/scss/components/_base.scss */
 h2, h3 {
   text-shadow: 1px 1px rgba(136, 136, 136, 0.6);
@@ -762,14 +757,14 @@ html, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, 
 
 /* line 19, dev/scss/components/_helpers.scss */
 .no-padding.ed-container > .ed-item {
-  padding-left: 0em;
-  padding-right: 0em;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 /* line 163, dev/scss/components/_helpers.scss */
 .no-padding.ed-item {
-  padding-left: 0em;
-  padding-right: 0em;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 /* line 164, dev/scss/components/_helpers.scss */
@@ -1050,22 +1045,27 @@ body.sticky-footer > footer {
           transform: scale(0.97);
 }
 
+/* line 8, dev/scss/components/_header.scss */
+.header {
+  margin-bottom: 1em;
+}
+
 @media screen and (max-width: 1023px) {
   /* line 8, dev/scss/components/_header.scss */
-  #header {
+  .header {
     background: #EAAC00;
   }
 }
 
 @media screen and (min-width: 1024px) {
   /* line 8, dev/scss/components/_header.scss */
-  #header {
+  .header {
     background: -webkit-linear-gradient(#EAAC00 70%, transparent 70%);
     background: linear-gradient(#EAAC00 70%, transparent 70%);
   }
 }
 
-/* line 21, dev/scss/components/_header.scss */
+/* line 24, dev/scss/components/_header.scss */
 .logo {
   color: #fef3db;
   font-weight: 300;
@@ -1078,14 +1078,14 @@ body.sticky-footer > footer {
   text-transform: uppercase;
 }
 
-/* line 31, dev/scss/components/_header.scss */
+/* line 34, dev/scss/components/_header.scss */
 .logo span {
   font-weight: 600;
   color: #221D48;
   text-shadow: 1px 1px rgba(204, 204, 204, 0.9);
 }
 
-/* line 36, dev/scss/components/_header.scss */
+/* line 39, dev/scss/components/_header.scss */
 .logo:before {
   content: "";
   background: url("../../img/logo32.png");
@@ -1093,12 +1093,12 @@ body.sticky-footer > footer {
   background-repeat: no-repeat;
 }
 
-/* line 48, dev/scss/components/_header.scss */
+/* line 51, dev/scss/components/_header.scss */
 .logo2 {
   float: left;
 }
 
-/* line 51, dev/scss/components/_header.scss */
+/* line 54, dev/scss/components/_header.scss */
 .subtitle {
   text-shadow: 1px 1px rgba(85, 85, 85, 0.5);
   margin: 0;
@@ -1111,7 +1111,7 @@ body.sticky-footer > footer {
 }
 
 @media screen and (min-width: 1024px) {
-  /* line 51, dev/scss/components/_header.scss */
+  /* line 54, dev/scss/components/_header.scss */
   .subtitle {
     text-align: left;
   }
@@ -1247,11 +1247,16 @@ body.sticky-footer > footer {
 }
 
 /* line 1, dev/scss/components/_servicios.scss */
+.servicios {
+  margin-bottom: 2em;
+}
+
+/* line 7, dev/scss/components/_servicios.scss */
 .servicio {
   text-align: center;
 }
 
-/* line 4, dev/scss/components/_servicios.scss */
+/* line 10, dev/scss/components/_servicios.scss */
 .servicio__img {
   width: 5em;
   height: 5em;
@@ -1259,19 +1264,19 @@ body.sticky-footer > footer {
 }
 
 @media screen and (min-width: 640px) {
-  /* line 4, dev/scss/components/_servicios.scss */
+  /* line 10, dev/scss/components/_servicios.scss */
   .servicio__img {
     width: 33%;
     margin-bottom: 1em;
   }
 }
 
-/* line 18, dev/scss/components/_servicios.scss */
+/* line 24, dev/scss/components/_servicios.scss */
 .servicio__title {
   margin: .3em 0;
 }
 
-/* line 21, dev/scss/components/_servicios.scss */
+/* line 27, dev/scss/components/_servicios.scss */
 .servicio__description {
   font-size: .8em;
 }
@@ -1812,52 +1817,57 @@ body.sticky-footer > footer {
 }
 
 /* line 1, dev/scss/components/_productos.scss */
+.productos {
+  margin-bottom: 2em;
+}
+
+/* line 4, dev/scss/components/_productos.scss */
 .producto {
   position: relative;
 }
 
-/* line 7, dev/scss/components/_productos.scss */
+/* line 10, dev/scss/components/_productos.scss */
 .producto__title1, .producto__title2, .producto__title3, .producto__title4 {
   margin: 0;
   line-height: 3em;
   text-align: center;
 }
 
-/* line 11, dev/scss/components/_productos.scss */
+/* line 14, dev/scss/components/_productos.scss */
 .producto__title1 span, .producto__title2 span, .producto__title3 span, .producto__title4 span {
   padding-left: .2em;
   font-weight: 300;
   font-size: .9em;
 }
 
-/* line 17, dev/scss/components/_productos.scss */
+/* line 20, dev/scss/components/_productos.scss */
 .producto__title1 {
   background: yellow;
 }
 
-/* line 20, dev/scss/components/_productos.scss */
+/* line 23, dev/scss/components/_productos.scss */
 .producto__title2 {
   background: red;
 }
 
-/* line 23, dev/scss/components/_productos.scss */
+/* line 26, dev/scss/components/_productos.scss */
 .producto__title3 {
   background: green;
 }
 
-/* line 26, dev/scss/components/_productos.scss */
+/* line 29, dev/scss/components/_productos.scss */
 .producto__title4 {
   background: blue;
 }
 
-/* line 33, dev/scss/components/_productos.scss */
+/* line 36, dev/scss/components/_productos.scss */
 .producto__item {
   overflow: hidden;
   position: relative;
   top: 0;
 }
 
-/* line 40, dev/scss/components/_productos.scss */
+/* line 43, dev/scss/components/_productos.scss */
 .producto__item:hover img {
   -webkit-transition: all 1.2s;
   transition: all 1.2s;
@@ -1867,7 +1877,7 @@ body.sticky-footer > footer {
           filter: sepia(0.5);
 }
 
-/* line 45, dev/scss/components/_productos.scss */
+/* line 48, dev/scss/components/_productos.scss */
 .producto__item:hover:after {
   opacity: 1;
   top: 0;
@@ -1875,7 +1885,7 @@ body.sticky-footer > footer {
           transform: scale(1) rotate(0deg);
 }
 
-/* line 52, dev/scss/components/_productos.scss */
+/* line 55, dev/scss/components/_productos.scss */
 .producto__item:after {
   content: "";
   position: absolute;
@@ -1891,12 +1901,12 @@ body.sticky-footer > footer {
   box-shadow: 0 -1px 0 0 rgba(51, 51, 51, 0.9) inset;
 }
 
-/* line 64, dev/scss/components/_productos.scss */
+/* line 67, dev/scss/components/_productos.scss */
 .producto__item:hover:after {
   box-shadow: 0 -100px 0 0 rgba(0, 0, 0, 0.8) inset;
 }
 
-/* line 69, dev/scss/components/_productos.scss */
+/* line 72, dev/scss/components/_productos.scss */
 .producto__description {
   left: 0;
   bottom: 10em;
@@ -1908,7 +1918,7 @@ body.sticky-footer > footer {
   transition: all .5s ease-in;
 }
 
-/* line 80, dev/scss/components/_productos.scss */
+/* line 83, dev/scss/components/_productos.scss */
 .producto__description:hover {
   bottom: 0;
   position: absolute;
@@ -1919,43 +1929,43 @@ body.sticky-footer > footer {
   opacity: 1;
 }
 
-/* line 94, dev/scss/components/_productos.scss */
+/* line 97, dev/scss/components/_productos.scss */
 .content-box__item {
   overflow: hidden;
   position: relative;
 }
 
-/* line 98, dev/scss/components/_productos.scss */
+/* line 101, dev/scss/components/_productos.scss */
 .content-box__media {
   width: 100%;
   height: 100%;
   position: relative;
 }
 
-/* line 104, dev/scss/components/_productos.scss */
+/* line 107, dev/scss/components/_productos.scss */
 .content-box__title {
   -webkit-transition: background .3s ease-in-out;
   transition: background .3s ease-in-out;
 }
 
-/* line 110, dev/scss/components/_productos.scss */
+/* line 113, dev/scss/components/_productos.scss */
 .content-box__title--expand {
   color: #B3B3B3;
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
 }
 
-/* line 117, dev/scss/components/_productos.scss */
+/* line 120, dev/scss/components/_productos.scss */
 .content-box__title--expand h1 {
   color: #000;
 }
 
-/* line 123, dev/scss/components/_productos.scss */
+/* line 126, dev/scss/components/_productos.scss */
 .content-box__header {
   color: #000;
 }
 
-/* line 128, dev/scss/components/_productos.scss */
+/* line 131, dev/scss/components/_productos.scss */
 .content-box__overlay {
   position: absolute;
   bottom: -101%;
@@ -1969,19 +1979,19 @@ body.sticky-footer > footer {
   transition: bottom .5s ease-in-out;
 }
 
-/* line 144, dev/scss/components/_productos.scss */
+/* line 147, dev/scss/components/_productos.scss */
 .content-box__overlay h1 {
   font-size: 1.625em;
   line-height: 1.92308em;
 }
 
-/* line 148, dev/scss/components/_productos.scss */
+/* line 151, dev/scss/components/_productos.scss */
 .content-box__overlay p {
   font-size: .875em;
   line-height: 1.78571em;
 }
 
-/* line 153, dev/scss/components/_productos.scss */
+/* line 156, dev/scss/components/_productos.scss */
 .content-box__icon {
   position: absolute;
   bottom: 0;
@@ -1995,7 +2005,7 @@ body.sticky-footer > footer {
   transition: background .3s ease-in-out;
 }
 
-/* line 166, dev/scss/components/_productos.scss */
+/* line 169, dev/scss/components/_productos.scss */
 .content-box__icon i {
   color: #000;
   font-size: 200%;
@@ -2003,39 +2013,39 @@ body.sticky-footer > footer {
   transition: color .3s ease-in-out;
 }
 
-/* line 173, dev/scss/components/_productos.scss */
+/* line 176, dev/scss/components/_productos.scss */
 .content-box__item:hover .content-box__title--expand {
   background: #FFCF21;
   color: #000;
 }
 
-/* line 177, dev/scss/components/_productos.scss */
+/* line 180, dev/scss/components/_productos.scss */
 .content-box__item:hover .content-box__title {
   background: #FFCF21;
 }
 
-/* line 180, dev/scss/components/_productos.scss */
+/* line 183, dev/scss/components/_productos.scss */
 .content-box__item:hover .content-box__overlay {
   bottom: 0;
 }
 
-/* line 183, dev/scss/components/_productos.scss */
+/* line 186, dev/scss/components/_productos.scss */
 .content-box__item:hover .content-box__overlay > div {
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
 }
 
-/* line 187, dev/scss/components/_productos.scss */
+/* line 190, dev/scss/components/_productos.scss */
 .content-box__item:hover .content-box__icon {
   background: #000;
 }
 
-/* line 190, dev/scss/components/_productos.scss */
+/* line 193, dev/scss/components/_productos.scss */
 .content-box__item:hover .content-box__icon i {
   color: #fff;
 }
 
-/* line 193, dev/scss/components/_productos.scss */
+/* line 196, dev/scss/components/_productos.scss */
 .content-box__container {
   display: table;
 }

@@ -5,7 +5,8 @@ $color4: #FFFFFF;
 
 $bp-menu: l;
 
-#header {
+.header {
+  margin-bottom: 1em;
   @include to($bp-menu){
     background: $color1;
   }
@@ -17,6 +18,8 @@ $bp-menu: l;
     );
   }
 }
+
+
 
 .logo {
   color: $color2;

@@ -755,14 +755,14 @@ footer {
 
 /* line 19, dev/scss/components/_helpers.scss */
 .no-padding.ed-container > .ed-item {
-  padding-left: 0em;
-  padding-right: 0em;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 /* line 163, dev/scss/components/_helpers.scss */
 .no-padding.ed-item {
-  padding-left: 0em;
-  padding-right: 0em;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 /* line 164, dev/scss/components/_helpers.scss */
