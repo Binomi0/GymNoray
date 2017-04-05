@@ -30,6 +30,11 @@ h2, h3 {
 footer {
   text-shadow: 1px 1px rgba(34, 34, 34, 0.8); }
 
+html, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0; }
+
 .ed-container {
   display: flex;
   flex-wrap: wrap;
@@ -770,7 +775,7 @@ body.sticky-footer {
   src: local("Roboto Condensed"), local("RobotoCondensed-Regular"), url(https://fonts.gstatic.com/s/robotocondensed/v13/Zd2E9abXLFGSr9G3YK2MsNxB8OB85xaNTJvVSB9YUjQ.woff) format("woff"); }
 .copy {
   margin: 0;
-  padding-left: 1em; }
+  padding-left: 0; }
   .copy__title {
     color: #fef3db;
     font-weight: 600;
@@ -1129,8 +1134,8 @@ body.sticky-footer {
   position: relative;
   box-shadow: 0 0 0 2px rgba(234, 172, 0, 0.9); }
   .item-galeria:hover img {
-    transition: all 1.2s;
-    transform: scale(1.3) rotate(-5deg);
+    transition: transform 1.2s ease-in;
+    transform: scale(1.2) rotate(-5deg);
     filter: grayscale(1); }
   .item-galeria:hover:after {
     opacity: 1;
@@ -1143,24 +1148,16 @@ body.sticky-footer {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5) url(../../img/logo64.png) no-repeat center center/4em 4em;
+    background: rgba(0, 0, 0, 0.5) url(../../img/logo64.png) no-repeat center center/5em 5em;
     opacity: 0;
-    transition: all .6s;
+    transition: all .6s  ease-in;
     transform: scale(0.1) rotate(360deg);
     transition-delay: .6s; }
   .item-galeria:hover:after {
     border: 1px solid rgba(255, 255, 255, 0.8); }
 
-.item-galeria:hover {
-  transition: all .6s;
-  transform: scale(1.1);
-  z-index: 200; }
-
 .producto {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background: #000; }
+  position: relative; }
   .producto__title1, .producto__title2, .producto__title3, .producto__title4 {
     margin: 0;
     line-height: 3em;
@@ -1179,8 +1176,8 @@ body.sticky-footer {
     background: blue; }
   .producto__item {
     overflow: hidden;
-    background: #000;
-    position: relative; }
+    position: relative;
+    top: 0; }
     .producto__item:hover img {
       transition: all 1.2s;
       transform: scale(1.3) rotate(-5deg);
@@ -1201,10 +1198,23 @@ body.sticky-footer {
       transition-delay: .6s;
       box-shadow: 0 -1px 0 0 rgba(51, 51, 51, 0.9) inset; }
     .producto__item:hover:after {
-      box-shadow: 0 -150px 0 0 rgba(0, 0, 0, 0.8) inset; }
-  .producto__description:hover {
-    bottom: 0;
-    opacity: 1; }
+      box-shadow: 0 -100px 0 0 rgba(0, 0, 0, 0.8) inset; }
+  .producto__description {
+    left: 0;
+    bottom: 10em;
+    width: 100%;
+    height: 101%;
+    color: #000;
+    background: #fff;
+    transition: all .5s ease-in; }
+    .producto__description:hover {
+      bottom: 0;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 1; }
 
 .content-box__item {
   overflow: hidden;
@@ -1267,6 +1277,32 @@ body.sticky-footer {
 .content-box__item:hover .content-box__icon i {
   color: #fff; }
 .content-box__container {
+  display: table; }
+
+figure {
+  margin: 0;
+  padding: 0; }
+
+#sliderproductos {
+  width: 95%;
+  margin: auto;
+  outline: 5px solid red;
+  overflow: hidden; }
+  #sliderproductos img {
+    width: 100%;
+    display: block;
+    margin-bottom: 1em; }
+  #sliderproductos section {
+    float: left;
+    width: 25%; }
+  #sliderproductos ul {
+    list-style: none; }
+  #sliderproductos h2 {
+    text-shadow: none;
+    font-size: .9em; }
+
+.slider-inner {
+  width: 400%;
   display: table; }
 
 body {

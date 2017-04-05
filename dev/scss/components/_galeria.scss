@@ -8,8 +8,8 @@
   box-shadow: 0 0 0 2px rgba($color1,.9);
   &:hover {
     img {
-      transition: all 1.2s;
-      transform: scale(1.3) rotate(-5deg);
+      transition: transform 1.2s ease-in;
+      transform: scale(1.2) rotate(-5deg);
       filter: grayscale(1);
     }
     &:after {
@@ -25,9 +25,9 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(#000, .5) url(../../img/logo64.png) no-repeat center center / 4em 4em;
+    background: rgba(#000, .5) url(../../img/logo64.png) no-repeat center center / 5em 5em;
     opacity: 0;
-    transition:  all .6s;
+    transition:  all .6s  ease-in;
     transform: scale(0.1) rotate(360deg);
     transition-delay: .6s;
   }
@@ -39,8 +39,8 @@
     border: 1px solid rgba(#fff, .8);
   }
 }
-.item-galeria:hover {
-  transition: all .6s;
-  transform: scale(1.1);
-  z-index: 200;
-}
+//.item-galeria:hover {
+//  transition: all .6s  ease-in;
+//  transform: scale(1.1);
+//  z-index: 200;
+//}

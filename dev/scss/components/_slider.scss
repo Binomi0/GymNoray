@@ -1,0 +1,33 @@
+figure {
+  margin:0;
+  padding:0;
+}
+
+#sliderproductos {
+
+  width: 95%;
+  margin:auto;
+  outline: 5px solid red;
+  overflow: hidden;
+  img{
+    width:100%;
+    display: block;
+    margin-bottom: 1em;
+  }
+  section {
+    float: left;
+    width: 25%;
+  }
+  ul {
+    list-style: none;
+  }
+  h2 {
+    text-shadow: none;
+    font-size: .9em;
+  }
+}
+
+.slider-inner{
+  width:400%;
+  display: table;
+}
