@@ -15,35 +15,35 @@ export default class Slider extends React.Component {
         };
 
         fetch('http://gymnoray.com/wp-json/wp/v2/posts')
-        .then( (posts) => {
-            fetch('http://gymnoray.com/wp-json/wp/v2/pages')
-            .then( (pages) => {
-                fetch('http://gymnoray.com/wp-json/wp/v2/media')
-                .then( (media) => {
-                    return media.json()
-                })
-                .then((json) => {
-                    console.log(json[0].title);
-                    this.setState({
-                        media: json,
+            .then( (posts) => {
+                fetch('http://gymnoray.com/wp-json/wp/v2/pages')
+                    .then( (pages) => {
+                        fetch('http://gymnoray.com/wp-json/wp/v2/media')
+                            .then( (media) => {
+                                return media.json()
+                            })
+                            .then((json) => {
+                                console.log(json[0]);
+                                this.setState({
+                                    media: json,
+                                });
+                            });
+                        return pages.json()
+                    })
+                    .then((json) => {
+                        console.log(json[0]);
+                        this.setState({
+                            pages: json,
+                        });
                     });
-                });
-                return pages.json()
+                return posts.json()
             })
             .then((json) => {
-                console.log(json[0].title);
+                console.log(json[0]);
                 this.setState({
-                    pages: json,
+                    posts: json,
                 });
             });
-            return posts.json()
-        })
-        .then((json) => {
-            console.log(json[0].title);
-            this.setState({
-                posts: json,
-            });
-        });
     }
     static componentWillMount() {
         console.log('El componente se va a montar' )
@@ -60,26 +60,30 @@ export default class Slider extends React.Component {
             .then( (json) => {
                 console.log(json[postId].title.rendered);
                 this.setState({
-                    media: json.id,
-                    posts: json
+                    media: json,
+                    posts: json,
+                    pages: json
                 });
             });
     }
 
     render () {
-        // this.setState({data: [{ posts:this.state.posts, pages:this.state.pages, media:this.state.media}] });
-        //console.log('El componente se ha montado con este ARRAY (POSTS)', this.state.posts);
-        // console.log('El componente se ha montado con este ARRAY (PAGES)', this.state.pages);
-        // console.log('El componente se ha montado con este ARRAY (MEDIA)', this.state.media);
+        const imgsarray = this.state.media;
+        const imgsdata = imgsarray.map(item2 => {
+            return (
+                <li key={item2.id}>
+                    <img width="50px" height="50px" src={item2.source_url} alt={item2.alt_text} title={item2.title.rendered}/>
+                </li>
+            )
+        });
         const dataposts = this.state.posts;
         const gymposts = dataposts.map(item => {
             return (
                 <li key={item.id}>
                     <section>
-                        <a href={item.id} src={this.state.media}>
+                        <a href={item.link} src={this.state.media}>
                             <h2>{item.title.rendered}</h2>
                         </a>
-                        <img width="50" height="50" src="" alt=""/>
                     </section>
                 </li>
             );
@@ -91,6 +95,7 @@ export default class Slider extends React.Component {
                 <button onClick={() => this.onChangePage('posts', 0)}>Posts</button>
                 <button onClick={() => this.onChangePage('media', 0)}>Media</button>
                 <ul>{gymposts}</ul>
+                <ul>{imgsdata}</ul>
             </div>
         )
     }

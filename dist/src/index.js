@@ -2,9 +2,8 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 // import App from './App'
 import Banner from './components/Banner'
-import Slider from './components/Slider'
-// import Posts from './data/Posts'
-// import jsonStore from './actions/JsonStore'
+import Clases from './components/Clases'
+import TimeClases from './data/TimeClases'
 
 
 ReactDOM.render(
@@ -13,7 +12,7 @@ ReactDOM.render(
 );
 
 ReactDOM.render(
-    <Slider />,
+    <Clases data={TimeClases} />,
     document.getElementById('sliderproductos')
 );
 

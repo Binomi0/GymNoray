@@ -32,6 +32,9 @@ html, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, 
   padding: 0;
   border: 0; }
 
+#sliderproductos {
+  margin-bottom: 1em; }
+
 .ed-container {
   display: flex;
   flex-wrap: wrap;
@@ -559,12 +562,12 @@ html, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, 
   clear: both; }
 
 .no-padding.ed-container > .ed-item {
-  padding-left: 0;
-  padding-right: 0; }
+  padding-left: 0em;
+  padding-right: 0em; }
 
 .no-padding.ed-item {
-  padding-left: 0;
-  padding-right: 0; }
+  padding-left: 0em;
+  padding-right: 0em; }
 
 .padding {
   padding-left: 0.9375em;
@@ -1291,6 +1294,7 @@ figure {
 #sliderproductos {
   width: 95%;
   margin: auto;
+  margin-bottom: 1em;
   outline: 5px solid red;
   overflow: hidden; }
   #sliderproductos img {
