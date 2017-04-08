@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom'
 // import App from './App'
 import Banner from './components/Banner'
 import Clases from './components/Clases'
-import TimeClases from './data/TimeClases'
+// import TimeClases from './data/TimeClases'
+import data from './data/data'
 
 
 ReactDOM.render(
@@ -12,7 +13,7 @@ ReactDOM.render(
 );
 
 ReactDOM.render(
-    <Clases data={TimeClases} />,
+    <Clases data={data} />,
     document.getElementById('sliderproductos')
 );
 
