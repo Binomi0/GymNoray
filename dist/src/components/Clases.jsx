@@ -6,7 +6,7 @@ class Clases extends React.Component {
         // Establecer fecha para listar el array
         let Fecha = new Date();
         let HoraActual = Fecha.getHours() + ':' + Fecha.getMinutes();
-        let diaHoy =  2; //Fecha.getDay();
+        let diaHoy =  Fecha.getDay();
 
         // Montar Array con las clases separadas por cada dia de la semana
         let filterList = new Array(7);
@@ -33,9 +33,9 @@ class Clases extends React.Component {
         if (minutosRestantes < 0) { minutosRestantes += 60; }
 
         let horasRestantes = finHoras - inicioHoras;
-        if (minutosRestantes > 30) { horasRestantes -= 1  }
+        // if (minutosRestantes > 30 ) { horasRestantes -= 1  }
 
-        if(horasRestantes <= 1) { horasRestantes = '' } else { horasRestantes += ' horas'  }
+        if(horasRestantes < 1 ) { horasRestantes = '' } else { horasRestantes += ' horas'  }
         let horas = horasRestantes.toString();
         if (horas.length < 2) { horas = "0"+horas; }
 
@@ -50,14 +50,12 @@ class Clases extends React.Component {
                 return false
             }
         });
-        return(
-            <div>
-                <ListaClases data={clasesList}
-                             proximaclase={proximaclase}
-                             horasrest={horasRestantes}
-                             minrest={minutosRestantes}/>
-            </div>
-        )
+        return  <ListaClases
+                    data={clasesList}
+                    proximaclase={proximaclase}
+                    horasrest={horasRestantes}
+                    minrest={minutosRestantes}
+                />
     }
 }
 

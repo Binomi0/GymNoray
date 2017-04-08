@@ -469,7 +469,7 @@ export default  [{
     }, {
         "id": 2,
         "dia": "07.04.2017",
-        "hora": "19:00",
+        "hora": "17:50",
         "actividad": "Yoga / Pilates",
         "enlace": "http://altervista.org",
         "imagen": "http://dummyimage.com/200x40.png/cc0000/ffffff"
