@@ -12,13 +12,13 @@ class ListaClases extends React.Component {
                         <td>{clase.actividad}</td>
                         <td><img src={clase.imagen} alt={clase.actividad} title={clase.actividad} /> </td>
                         <td>{clase.hora}</td>
-                        <td><button href={clase.enlace}>Apuntarme</button></td>
+                        <td><a href={clase.enlace}>Apuntarme</a></td>
                     </tr>
                 )
         });
         return (
             <div>
-                <h3>No te pierdas la próxima clase de {this.props.proximaclase} en {quitarhora} {this.props.minrest} minutos</h3>
+                <h1>No te pierdas la próxima clase de {this.props.proximaclase} en {quitarhora} {this.props.minrest} minutos</h1>
                 <table>
                     <tbody>
                         <tr width="100%">
