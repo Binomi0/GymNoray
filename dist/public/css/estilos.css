@@ -94,7 +94,7 @@ html, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, 
 |
 */
 /* line 1, dev/scss/components/_buttons.scss */
-.button {
+.button, .clases__button, .selector1 {
   display: inline-block;
   line-height: 2.5em;
   padding: 0 1.5em;
@@ -1065,8 +1065,8 @@ body.sticky-footer > footer {
 @media screen and (min-width: 1024px) {
   /* line 8, dev/scss/components/_header.scss */
   .header {
-    background: -webkit-linear-gradient(#EAAC00 70%, transparent 70%);
-    background: linear-gradient(#EAAC00 70%, transparent 70%);
+    background: -webkit-linear-gradient(#EAAC00 85%, transparent 85%);
+    background: linear-gradient(#EAAC00 85%, transparent 85%);
   }
 }
 
@@ -1078,19 +1078,20 @@ body.sticky-footer > footer {
   font-family: "Roboto Condensed", sans serif;
   line-height: 1em;
   margin: .3em 0 0;
+  padding-top: .2em;
   text-align: left;
   text-shadow: 1px 1px rgba(68, 68, 68, 0.9);
   text-transform: uppercase;
 }
 
-/* line 34, dev/scss/components/_header.scss */
+/* line 35, dev/scss/components/_header.scss */
 .logo span {
   font-weight: 600;
   color: #221D48;
   text-shadow: 1px 1px rgba(204, 204, 204, 0.9);
 }
 
-/* line 39, dev/scss/components/_header.scss */
+/* line 40, dev/scss/components/_header.scss */
 .logo:before {
   content: "";
   background: url("../../img/logo32.png");
@@ -1098,12 +1099,12 @@ body.sticky-footer > footer {
   background-repeat: no-repeat;
 }
 
-/* line 51, dev/scss/components/_header.scss */
+/* line 52, dev/scss/components/_header.scss */
 .logo2 {
   float: left;
 }
 
-/* line 54, dev/scss/components/_header.scss */
+/* line 55, dev/scss/components/_header.scss */
 .subtitle {
   text-shadow: 1px 1px rgba(85, 85, 85, 0.5);
   margin: 0;
@@ -1116,10 +1117,40 @@ body.sticky-footer > footer {
 }
 
 @media screen and (min-width: 1024px) {
-  /* line 54, dev/scss/components/_header.scss */
+  /* line 55, dev/scss/components/_header.scss */
   .subtitle {
     text-align: left;
   }
+}
+
+/* line 71, dev/scss/components/_header.scss */
+.proximaClase {
+  margin: auto;
+  padding-top: .3em;
+  color: #fef3db;
+}
+
+/* line 76, dev/scss/components/_header.scss */
+.sociales__header {
+  text-align: center;
+  padding-top: .1em;
+}
+
+/* line 80, dev/scss/components/_header.scss */
+.sociales__small {
+  font-size: .7em;
+  color: #EAAC00;
+  background: #9e7400;
+  display: inline-block;
+  margin: .3em;
+  border-radius: 50%;
+  padding: .3em;
+}
+
+/* line 88, dev/scss/components/_header.scss */
+.sociales__small:hover {
+  text-decoration: none;
+  color: #fff;
 }
 
 @font-face {
@@ -1157,13 +1188,13 @@ body.sticky-footer > footer {
   src: local("Roboto Condensed"), local("RobotoCondensed-Regular"), url(https://fonts.gstatic.com/s/robotocondensed/v13/Zd2E9abXLFGSr9G3YK2MsNxB8OB85xaNTJvVSB9YUjQ.woff) format("woff");
 }
 
-/* line 5, dev/scss/components/_banner.scss */
+/* line 1, dev/scss/components/_banner.scss */
 .copy {
   margin: 0;
   padding-left: 0;
 }
 
-/* line 9, dev/scss/components/_banner.scss */
+/* line 5, dev/scss/components/_banner.scss */
 .copy__title {
   color: #fef3db;
   font-weight: 600;
@@ -1171,7 +1202,7 @@ body.sticky-footer > footer {
   text-transform: uppercase;
 }
 
-/* line 14, dev/scss/components/_banner.scss */
+/* line 11, dev/scss/components/_banner.scss */
 .copy__title span {
   display: block;
   font-size: .7em;
@@ -1179,73 +1210,73 @@ body.sticky-footer > footer {
   text-transform: none;
 }
 
-/* line 22, dev/scss/components/_banner.scss */
+/* line 19, dev/scss/components/_banner.scss */
 .copy__description {
   font-size: .85em;
   margin-bottom: 0;
 }
 
-/* line 27, dev/scss/components/_banner.scss */
+/* line 24, dev/scss/components/_banner.scss */
 .copy__button {
-  font-size: .9em;
-  color: #FFFFFF;
   background: -webkit-linear-gradient(#b78700, #846100);
   background: linear-gradient(#b78700, #846100);
-  line-height: 2em;
-  display: inline-block;
   border-radius: 3px;
+  color: #FFFFFF;
+  display: inline-block;
+  font-size: .9em;
+  line-height: 2em;
   margin: .5em 0;
   padding: 0 1em;
 }
 
-/* line 40, dev/scss/components/_banner.scss */
+/* line 37, dev/scss/components/_banner.scss */
 .copy__button:hover {
-  text-decoration: none;
   color: #ffd151;
+  text-decoration: none;
 }
 
 @media screen and (min-width: 640px) {
-  /* line 48, dev/scss/components/_banner.scss */
+  /* line 45, dev/scss/components/_banner.scss */
   .banner {
     margin-bottom: 1em;
     position: relative;
   }
-  /* line 53, dev/scss/components/_banner.scss */
+  /* line 50, dev/scss/components/_banner.scss */
   .copy {
-    position: absolute;
     background: rgba(254, 243, 219, 0.95);
     border-radius: 5px;
     margin: 0 1.5em;
     padding: 0 1.5em 1em;
+    position: absolute;
     top: 50%;
-    width: 50%;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
+    width: 50%;
   }
-  /* line 65, dev/scss/components/_banner.scss */
+  /* line 59, dev/scss/components/_banner.scss */
   .copy__title {
-    font-size: 2.5em;
     color: #EAAC00;
+    font-size: 2.5em;
+    line-height: 1em;
+  }
+  /* line 63, dev/scss/components/_banner.scss */
+  .copy__title span {
+    display: block;
+    font-size: .6em;
     line-height: 1em;
   }
   /* line 69, dev/scss/components/_banner.scss */
-  .copy__title span {
-    display: block;
-    line-height: 1em;
-    font-size: .6em;
-  }
-  /* line 75, dev/scss/components/_banner.scss */
   .copy__title__description {
     color: #FFFFFF;
   }
-  /* line 79, dev/scss/components/_banner.scss */
+  /* line 73, dev/scss/components/_banner.scss */
   .copy__title__button {
-    font-size: 0.6em;
+    font-size: .6em;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  /* line 87, dev/scss/components/_banner.scss */
+  /* line 81, dev/scss/components/_banner.scss */
   .copy {
     width: 50%;
   }
@@ -1467,16 +1498,21 @@ body.sticky-footer > footer {
   color: #fff;
 }
 
-/* line 33, dev/scss/components/_footer.scss */
+/* line 34, dev/scss/components/_footer.scss */
 #footer .sociales {
   padding-top: 0;
 }
 
 @media screen and (min-width: 640px) {
-  /* line 33, dev/scss/components/_footer.scss */
+  /* line 34, dev/scss/components/_footer.scss */
   #footer .sociales {
     text-align: right;
   }
+}
+
+/* line 43, dev/scss/components/_footer.scss */
+.top-menu {
+  height: 2em;
 }
 
 /* line 1, dev/scss/components/_menu.scss */
@@ -1674,7 +1710,7 @@ body.sticky-footer > footer {
     color: #fef3db;
     font-size: .9em;
     line-height: 3em;
-    margin: 1em 0;
+    margin: .3em 0 0;
     opacity: .8;
     text-transform: uppercase;
     -webkit-transition: all .5s;
@@ -1701,19 +1737,19 @@ body.sticky-footer > footer {
   }
 }
 
-/* line 69, dev/scss/components/_menu.scss */
+/* line 70, dev/scss/components/_menu.scss */
 .main-menu__subitem {
   font-size: .7em;
 }
 
-/* line 79, dev/scss/components/_menu.scss */
+/* line 80, dev/scss/components/_menu.scss */
 .main-nav {
   background: #EAAC00;
   color: #fef3db;
 }
 
 @media screen and (max-width: 1023px) {
-  /* line 79, dev/scss/components/_menu.scss */
+  /* line 80, dev/scss/components/_menu.scss */
   .main-nav {
     margin-top: 2.9em;
     border-top: 1px solid rgba(255, 255, 255, 0.3);
@@ -1721,7 +1757,7 @@ body.sticky-footer > footer {
 }
 
 @media screen and (max-width: 1023px) and (max-width: 1023px) {
-  /* line 79, dev/scss/components/_menu.scss */
+  /* line 80, dev/scss/components/_menu.scss */
   .main-nav {
     position: fixed;
     -webkit-transition: all .3s;
@@ -1739,14 +1775,14 @@ body.sticky-footer > footer {
 }
 
 @media screen and (max-width: 1023px) {
-  /* line 92, dev/scss/components/_menu.scss */
+  /* line 93, dev/scss/components/_menu.scss */
   .nav-toggle {
     margin: 2em 0 2em;
   }
 }
 
 @media screen and (max-width: 1023px) {
-  /* line 92, dev/scss/components/_menu.scss */
+  /* line 93, dev/scss/components/_menu.scss */
   .nav-toggle {
     position: relative;
     z-index: 300;
@@ -2055,6 +2091,45 @@ body.sticky-footer > footer {
   display: table;
 }
 
+/* line 201, dev/scss/components/_productos.scss */
+.duracion {
+  font-size: .7em;
+}
+
+/* line 205, dev/scss/components/_productos.scss */
+.lista-clases {
+  float: left;
+  width: 25%;
+  padding: .6em;
+  position: relative;
+}
+
+/* line 212, dev/scss/components/_productos.scss */
+.lista-clases__img {
+  opacity: .4;
+}
+
+/* line 215, dev/scss/components/_productos.scss */
+.lista-clases__img:hover {
+  left: -100px;
+  opacity: .8;
+}
+
+/* line 219, dev/scss/components/_productos.scss */
+.item_clases {
+  position: absolute;
+  padding: 1em 0 0 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+/* line 230, dev/scss/components/_productos.scss */
+.item-clases:hover {
+  left: -100px;
+}
+
 /* line 1, dev/scss/components/_slider.scss */
 figure {
   margin: 0;
@@ -2063,7 +2138,6 @@ figure {
 
 /* line 6, dev/scss/components/_slider.scss */
 #sliderproductos {
-  width: 95%;
   margin: auto;
   margin-bottom: 1em;
   outline: 5px solid red;
@@ -2128,4 +2202,102 @@ body {
   opacity: 0.01;
   -webkit-transition: opacity 300ms ease-in;
   transition: opacity 300ms ease-in;
+}
+
+/* line 34, dev/css/estilos.scss */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* line 40, dev/css/estilos.scss */
+tr {
+  background-color: #FFFFFF;
+  height: 3em;
+  border-bottom: solid 1px rgba(234, 172, 0, 0.2);
+  font-size: .9em;
+}
+
+/* line 45, dev/css/estilos.scss */
+tr:hover {
+  background-color: #EAAC00;
+  color: #fef3db;
+}
+
+/* line 50, dev/css/estilos.scss */
+tr:nth-child(even) {
+  background-color: #fef3db;
+}
+
+/* line 52, dev/css/estilos.scss */
+tr:nth-child(even):hover {
+  background-color: #EAAC00;
+}
+
+/* line 58, dev/css/estilos.scss */
+td {
+  text-align: center;
+}
+
+/* line 63, dev/css/estilos.scss */
+.clases__title {
+  height: 5em;
+  background-color: #EAAC00;
+  text-transform: uppercase;
+}
+
+/* line 68, dev/css/estilos.scss */
+.clases__button {
+  background: #EAAC00;
+  color: white;
+  border-radius: .25em;
+  margin: auto 0 auto;
+}
+
+/* line 15, dev/scss/components/_buttons.scss */
+.clases__button:hover {
+  background: #d19900;
+  text-decoration: none;
+}
+
+/* line 20, dev/scss/components/_buttons.scss */
+.clases__button:active {
+  -webkit-transform: scale(0.97);
+          transform: scale(0.97);
+}
+
+/* line 71, dev/css/estilos.scss */
+.clases__button:hover {
+  background-color: #fef3db;
+  color: #EAAC00;
+}
+
+/* line 81, dev/css/estilos.scss */
+.selector1 {
+  background: #EAAC00;
+  color: #fef3db;
+  border-radius: .25em;
+}
+
+/* line 15, dev/scss/components/_buttons.scss */
+.selector1:hover {
+  background: #d19900;
+  text-decoration: none;
+}
+
+/* line 20, dev/scss/components/_buttons.scss */
+.selector1:active {
+  -webkit-transform: scale(0.97);
+          transform: scale(0.97);
+}
+
+/* line 84, dev/css/estilos.scss */
+body {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr 3fr 2fr;
+      grid-template-rows: 1fr 3fr 2fr;
+  grid-gap: 10px;
 }

@@ -93,108 +93,140 @@
     }
   }
 
-  .content-box {
-    &__item {
-      overflow: hidden;
-      position: relative
-    }
-    &__media {
-      width: 100%;
-      height: 100%;
-      position: relative
-    }
-
-    &__title {
-      //font-size: .875em;
-      //line-height: 1.78571em;
-      transition: background .3s ease-in-out
-    }
-
-    &__title--expand {
-      color: #B3B3B3;
-      //font-size: 1.125em;
-      //line-height: 1.38889em;
-      transition: all .3s ease-in-out
-    }
-
-    &__title--expand h1 {
-      color: #000;
-      //font-size: 1.5em;
-      //line-height: 1.08333em;
-    }
-
-    &__header {
-      color: #000;
-      //font-size: 1.125em;
-      //line-height: 1.38889em;
-    }
-    &__overlay {
-      position: absolute;
-      bottom: -101%;
-      left: 0;
-      width: 100%;
-      height: 101%;
-      color: #000;
-      background: #fff;
-      padding-left: 1em;
-      transition: bottom .5s ease-in-out
-    }
-    //&__overlay>div{filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-    //  opacity:0;-moz-transition:opacity .2s ease-in-out,1.5s;
-    //  -o-transition:opacity .2s ease-in-out,1.5s;
-    //  -webkit-transition:opacity .2s ease-in-out,1.5s;
-    //  transition:opacity .2s ease-in-out,1.5s}
-    &__overlay h1 {
-      font-size: 1.625em;
-      line-height: 1.92308em;
-    }
-    &__overlay p {
-      font-size: .875em;
-      line-height: 1.78571em;
-    }
-
-    &__icon {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 3.25em;
-      height: 3.25em;
-      line-height: 4em;
-      background: #fff;
-      text-align: center;
-      transition: background .3s ease-in-out
-    }
-
-
-    &__icon i {
-      color: #000;
-      font-size: 200%;
-      transition: color .3s ease-in-out
-    }
-
-
-    &__item:hover &__title--expand{
-      background:#FFCF21;
-      color:#000
-    }
-    &__item:hover &__title{
-      background:#FFCF21
-    }
-    &__item:hover &__overlay{
-      bottom:0
-    }
-    &__item:hover &__overlay>div{
-      filter:progid:DXImageTransform.Microsoft.Alpha(enabled=false);
-      opacity:1
-    }
-    &__item:hover &__icon{
-      background:#000
-    }
-    &__item:hover &__icon i{
-      color:#fff
-    }
-    &__container{
-      display:table
-    }
+.content-box {
+  &__item {
+    overflow: hidden;
+    position: relative
+  }
+  &__media {
+    width: 100%;
+    height: 100%;
+    position: relative
   }
 
+  &__title {
+    //font-size: .875em;
+    //line-height: 1.78571em;
+    transition: background .3s ease-in-out
+  }
+
+  &__title--expand {
+    color: #B3B3B3;
+    //font-size: 1.125em;
+    //line-height: 1.38889em;
+    transition: all .3s ease-in-out
+  }
+
+  &__title--expand h1 {
+    color: #000;
+    //font-size: 1.5em;
+    //line-height: 1.08333em;
+  }
+
+  &__header {
+    color: #000;
+    //font-size: 1.125em;
+    //line-height: 1.38889em;
+  }
+  &__overlay {
+    position: absolute;
+    bottom: -101%;
+    left: 0;
+    width: 100%;
+    height: 101%;
+    color: #000;
+    background: #fff;
+    padding-left: 1em;
+    transition: bottom .5s ease-in-out
+  }
+  //&__overlay>div{filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  //  opacity:0;-moz-transition:opacity .2s ease-in-out,1.5s;
+  //  -o-transition:opacity .2s ease-in-out,1.5s;
+  //  -webkit-transition:opacity .2s ease-in-out,1.5s;
+  //  transition:opacity .2s ease-in-out,1.5s}
+  &__overlay h1 {
+    font-size: 1.625em;
+    line-height: 1.92308em;
+  }
+  &__overlay p {
+    font-size: .875em;
+    line-height: 1.78571em;
+  }
+
+  &__icon {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 3.25em;
+    height: 3.25em;
+    line-height: 4em;
+    background: #fff;
+    text-align: center;
+    transition: background .3s ease-in-out
+  }
+
+
+  &__icon i {
+    color: #000;
+    font-size: 200%;
+    transition: color .3s ease-in-out
+  }
+
+
+  &__item:hover &__title--expand{
+    background:#FFCF21;
+    color:#000
+  }
+  &__item:hover &__title{
+    background:#FFCF21
+  }
+  &__item:hover &__overlay{
+    bottom:0
+  }
+  &__item:hover &__overlay>div{
+    filter:progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+    opacity:1
+  }
+  &__item:hover &__icon{
+    background:#000
+  }
+  &__item:hover &__icon i{
+    color:#fff
+  }
+  &__container{
+    display:table
+  }
+}
+
+.duracion {
+  font-size: .7em;
+}
+
+.lista-clases {
+  float: left;
+  width: 25%;
+  padding: .6em;
+  position: relative;
+}
+
+.lista-clases__img{
+  opacity:.4;
+}
+.lista-clases__img:hover{
+  left: -100px;
+  opacity:.8;
+}
+.item_clases{
+  position: absolute;
+  padding: 1em 0 0 0;
+  top: 0;
+  left: 0;
+  width:100%;
+  text-align: center;
+
+
+}
+
+.item-clases:hover{
+  left: -100px;
+}

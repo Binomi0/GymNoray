@@ -30,3 +30,60 @@ footer {
   opacity: 0.01;
   transition: opacity 300ms ease-in;
 }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  //border-spacing: 0;
+}
+
+tr {
+  background-color: #FFFFFF;
+  height: 3em;
+  border-bottom: solid 1px rgba($color1, .2);
+  font-size: .9em;
+  &:hover{
+    background-color: $color1;
+    color: $color2;
+
+  }
+  &:nth-child(even) {
+    background-color: $color2;
+    &:hover {
+      background-color: $color1;
+    }
+  }
+}
+
+td{
+  text-align: center;
+}
+
+.clases {
+  &__title {
+    height: 5em;
+    background-color: $color1;
+    text-transform: uppercase;
+  }
+  &__button {
+    @include button($color1, white, radius);
+    margin: auto 0 auto;
+    &:hover {
+
+      background-color: $color2;
+      color: $color1;
+
+    }
+  }
+}
+
+
+.selector1 {
+  @include button($color1, $color2, radius);
+}
+body{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 3fr 2fr;
+    grid-gap: 10px;
+}

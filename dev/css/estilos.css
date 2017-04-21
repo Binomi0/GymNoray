@@ -62,7 +62,7 @@ html, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, 
 | $gutter: separaci├│n entre cada item de la cuadricula (opcional)
 |
 */
-.button {
+.button, .clases__button, .selector1 {
   display: inline-block;
   line-height: 2.5em;
   padding: 0 1.5em;
@@ -721,6 +721,7 @@ body.sticky-footer {
   font-family: "Roboto Condensed", sans serif;
   line-height: 1em;
   margin: .3em 0 0;
+  padding-top: .2em;
   text-align: left;
   text-shadow: 1px 1px rgba(68, 68, 68, 0.9);
   text-transform: uppercase; }
@@ -749,6 +750,27 @@ body.sticky-footer {
   @media screen and (min-width: 1024px) {
     .subtitle {
       text-align: left; } }
+
+.proximaClase {
+  margin: auto;
+  padding-top: .3em;
+  color: #fef3db; }
+
+.sociales__header {
+  text-align: center;
+  padding-top: .1em; }
+
+.sociales__small {
+  font-size: .7em;
+  color: #EAAC00;
+  background: #9e7400;
+  display: inline-block;
+  margin: .3em;
+  border-radius: 50%;
+  padding: .3em; }
+  .sociales__small:hover {
+    text-decoration: none;
+    color: #fff; }
 
 @font-face {
   font-family: 'Open Sans';
@@ -964,6 +986,9 @@ body.sticky-footer {
       #footer .sociales {
         text-align: right; } }
 
+.top-menu {
+  height: 2em; }
+
 .main-menu {
   list-style: none;
   margin: 0;
@@ -1074,7 +1099,7 @@ body.sticky-footer {
         color: #fef3db;
         font-size: .9em;
         line-height: 3em;
-        margin: 1em 0;
+        margin: .3em 0 0;
         opacity: .8;
         text-transform: uppercase;
         transition: all .5s;
@@ -1287,12 +1312,38 @@ body.sticky-footer {
 .content-box__container {
   display: table; }
 
+.duracion {
+  font-size: .7em; }
+
+.lista-clases {
+  float: left;
+  width: 25%;
+  padding: .6em;
+  position: relative; }
+
+.lista-clases__img {
+  opacity: .4; }
+
+.lista-clases__img:hover {
+  left: -100px;
+  opacity: .8; }
+
+.item_clases {
+  position: absolute;
+  padding: 1em 0 0 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center; }
+
+.item-clases:hover {
+  left: -100px; }
+
 figure {
   margin: 0;
   padding: 0; }
 
 #sliderproductos {
-  width: 95%;
   margin: auto;
   margin-bottom: 1em;
   outline: 5px solid red;
@@ -1331,5 +1382,53 @@ body {
 .example-leave.example-leave-active {
   opacity: 0.01;
   transition: opacity 300ms ease-in; }
+
+table {
+  width: 100%;
+  border-collapse: collapse; }
+
+tr {
+  background-color: #FFFFFF;
+  height: 3em;
+  border-bottom: solid 1px rgba(234, 172, 0, 0.2);
+  font-size: .9em; }
+  tr:hover {
+    background-color: #EAAC00;
+    color: #fef3db; }
+  tr:nth-child(even) {
+    background-color: #fef3db; }
+    tr:nth-child(even):hover {
+      background-color: #EAAC00; }
+
+td {
+  text-align: center; }
+
+.clases__title {
+  height: 5em;
+  background-color: #EAAC00;
+  text-transform: uppercase; }
+.clases__button {
+  background: #EAAC00;
+  color: white;
+  border-radius: .25em;
+  margin: auto 0 auto; }
+  .clases__button:hover {
+    background: #d19900;
+    text-decoration: none; }
+  .clases__button:active {
+    transform: scale(0.97); }
+  .clases__button:hover {
+    background-color: #fef3db;
+    color: #EAAC00; }
+
+.selector1 {
+  background: #EAAC00;
+  color: #fef3db;
+  border-radius: .25em; }
+  .selector1:hover {
+    background: #d19900;
+    text-decoration: none; }
+  .selector1:active {
+    transform: scale(0.97); }
 
 /*# sourceMappingURL=estilos.css.map */

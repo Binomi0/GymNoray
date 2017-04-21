@@ -56,8 +56,8 @@ class JsonData extends React.Component {
         return (
             <div>
                 <ul>{gymposts} </ul>
-                <ul> {gympages}</ul>
-                <ul> {gymmedia}</ul>
+                <ul>{gympages}</ul>
+                <ul>{gymmedia}</ul>
             </div>
         )
     }

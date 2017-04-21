@@ -13,8 +13,8 @@ $bp-menu: l;
 
   @include from($bp-menu){
     background: linear-gradient(
-                $color1 70%,
-                transparent 70%
+                $color1 85%,
+                transparent 85%
     );
   }
 }
@@ -28,6 +28,7 @@ $bp-menu: l;
   font-family: $header--font-family;
   line-height:1em;
   margin:.3em 0 0;
+  padding-top: .2em;
   text-align: left;
   text-shadow: 1px 1px rgba(#444,.9);
   text-transform: uppercase;
@@ -64,5 +65,28 @@ $bp-menu: l;
     text-align: left;
 
 
+  }
+}
+
+.proximaClase {
+  margin: auto;
+  padding-top: .3em;
+  color: $color2;
+}
+.sociales__header {
+  text-align: center;
+  padding-top: .1em;
+}
+.sociales__small {
+  font-size: .7em;
+  color: $color1;
+  background: darken($color1,15%);
+  display: inline-block;
+  margin: .3em;
+  border-radius: 50%;
+  padding: .3em;
+  &:hover{
+    text-decoration: none;
+    color: #fff;
   }
 }

@@ -1,61 +1,56 @@
 import React from 'react'
-import ListaClases from './ListaClases'
+import ItemClases from './ItemClases'
+import HeaderClases from './HeaderClases'
+import FilterClases from '../actions/FilterClases'
 
 class Clases extends React.Component {
     render() {
+        console.log(this.props.data[0]);
+
         // Establecer fecha para listar el array
-        let Fecha = new Date();
-        let HoraActual = Fecha.getHours() + ':' + Fecha.getMinutes();
-        let diaHoy =  Fecha.getDay();
+        let  Horas = new Date().getHours(),
+        Minutos = new Date().getMinutes(),
+        diaHoy =  new Date().getDay();
+        if (Horas.length <= 2) { Horas = '0'+Horas}
+        if (Minutos.length < 2) { Minutos = '0'+Minutos}
+        let HoraActual = Horas + ':' + Minutos;
+
+        console.log(Horas, Minutos, HoraActual);
 
         // Montar Array con las clases separadas por cada dia de la semana
-        let filterList = new Array(7);
-        filterList[0] = this.props.data.map(dia => dia.lunes);
-        filterList[1] = this.props.data.map(dia => dia.lunes);
-        filterList[2] = this.props.data.map(dia => dia.Martes);
-        filterList[3] = this.props.data.map(dia => dia.Miercoles);
-        filterList[4] = this.props.data.map(dia => dia.Jueves);
-        filterList[5] = this.props.data.map(dia => dia.Viernes);
-        filterList[6] = this.props.data.map(dia => dia.Sabado);
-
-        // console.log(filterList[diaHoy]);  // Devuelve el array del dia en curso
-
+        let filterList = {};
+        for (let i = 0; i<7 ; i++) {
+            filterList[i] = this.props.data[i].map((dayList) => dayList);
+        }
+        console.log(filterList[0],'\n', filterList[1],'\n', filterList[2],'\n', filterList[3],'\n', );
         // Filtro que debe devolver el array del dia de la semana en curso
         const listafiltrada = filterList[diaHoy].reduce((semana) => semana).filter((dia => {
-            if (dia.hora > HoraActual) { return dia  } else { return false}
+            if (dia.hora > HoraActual) {
+                console.log(dia.hora, HoraActual);
+                return dia } else { return false }
         })).map((hora => hora));
-        let inicioMinutos = parseInt(HoraActual.substr(3,2),10);
-        let inicioHoras = parseInt(HoraActual.substr(0,3),10);
-        let finMinutos = parseInt(listafiltrada[0].hora.substr(3,2),10);
-        let finHoras = parseInt(listafiltrada[0].hora.substr(0,3),10);
+        console.log(listafiltrada[0].hora, HoraActual);
+        let finMinutos = parseInt(listafiltrada[0].hora.substr(3,2),10),
+        finHoras = parseInt(listafiltrada[0].hora.substr(0,3),10),
+        minutosRestantes = finMinutos - Minutos,
+        horasRestantes = finHoras - Horas,
+        proximaclase = listafiltrada[0].actividad;
 
-        let minutosRestantes = finMinutos - inicioMinutos;
-        if (minutosRestantes < 0) { minutosRestantes += 60; }
+        if (minutosRestantes < 0) { minutosRestantes += 60}
 
-        let horasRestantes = finHoras - inicioHoras;
-        // if (minutosRestantes > 30 ) { horasRestantes -= 1  }
-
-        if(horasRestantes < 1 ) { horasRestantes = '' } else { horasRestantes += ' horas'  }
-        let horas = horasRestantes.toString();
-        if (horas.length < 2) { horas = "0"+horas; }
-
-        /* 
-        *  Pasa la lista filtrada al componente via props
-        */
-        let proximaclase = listafiltrada[0].actividad;
-        const clasesList = listafiltrada.map(function(clase) {
-            if (clase.hora > HoraActual) {
-                return clase
-            } else {
-                return false
-            }
-        });
-        return  <ListaClases
-                    data={clasesList}
+        return  (
+            <div>
+                <HeaderClases
                     proximaclase={proximaclase}
                     horasrest={horasRestantes}
-                    minrest={minutosRestantes}
+                    minrest={minutosRestantes}/>
+                <FilterClases />
+                <ItemClases
+                    data={listafiltrada}
+                    proximaclase={proximaclase}
                 />
+            </div>
+        )
     }
 }
 

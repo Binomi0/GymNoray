@@ -6,7 +6,10 @@ header#header.header
 			p.subtitle.
 				Centro Deportivo y Salud
 		.ed-item.s-20.l-75.main-end
-			include _menu
-	.ed-container
-		.ed-item
-			include ../modulos/_banner
+			.ed-container
+				.ed-item.l-100.no-padding
+					include _headerMenu
+				.ed-item.main-end.l-100.no-padding
+					include _menu
+	
+		include _banner

@@ -17,19 +17,6 @@ export default class Banner extends React.Component {
         }, 10000);
     }
 
-    static componentWillMount(){
-        console.log('El componente se montará')
-    }
-
-    static componentDidMount(){
-        console.log('El componente se ha montado')
-    }
-
-    static componentWillUnmount(e){
-        e.preventDefault();
-        console.log('El componente se desmontará')
-    }
-
     render () {
         return (
             <div>
@@ -42,7 +29,7 @@ export default class Banner extends React.Component {
                     <img src={this.state.src + this.state.counter + '.jpg'} alt={this.state.title} title={this.state.title}/>
                 </ReactCSSTransitionGroup>
                 <div className="copy l-40">
-                    <h2 className="copy__title">Box Gym Noray<span> Te regalamos una semana ¡GRATIS!</span></h2>
+                    <h2 className="copy__title">Box Gym Noray<span>¿Te gustaría probar una semana GRATIS?</span></h2>
                     <p className="copy__description">Ven a conocer nuestro Box con nuevas máquinas y servicios para que entrenes al máximo nivel, en un gran ambiente.</p>
                     <a onClick={this.componentWillUnmount} className="copy__button" id="myAnchor">¡Reserva ya tu plaza!</a>
                 </div>

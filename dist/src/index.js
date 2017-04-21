@@ -1,11 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-// import App from './App'
 import Banner from './components/Banner'
-import Clases from './components/Clases'
-// import TimeClases from './data/TimeClases'
-import data from './data/data'
-
+import data from './data/data2'
+import App from './App'
 
 ReactDOM.render(
     <Banner />,
@@ -13,8 +10,11 @@ ReactDOM.render(
 );
 
 ReactDOM.render(
-    <Clases data={data} />,
+    <App data={data} />,
     document.getElementById('sliderproductos')
 );
 
-
+// ReactDOM.render (
+//     <ProximaClase props={infoClase}/>,
+//     document.getElementById('proximaClase')
+// );
